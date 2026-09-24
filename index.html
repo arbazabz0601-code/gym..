@@ -1594,6 +1594,169 @@ header#siteHeader .hamburger{
 }
 </style>
 
+<style id="header-3d-final">
+/* ===== 3D HEADER (final, wins over older overrides) ===== */
+header#siteHeader{position:sticky!important;top:0!important;z-index:10000!important;
+  background:linear-gradient(180deg,#1b1b1b 0%,#0a0a0a 100%)!important;border-bottom:0!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.12)!important;perspective:900px}
+header#siteHeader::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,transparent,#ffc72c,#fff3c4,#ffc72c,transparent);background-size:200% 100%;animation:hdrShine 4s linear infinite}
+@keyframes hdrShine{to{background-position:-200% 0}}
+header#siteHeader .navwrap{min-height:72px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;flex-wrap:nowrap!important}
+header#siteHeader .logo{min-width:0!important;flex:0 0 auto;transition:transform .4s}
+header#siteHeader .logo:hover{transform:rotateY(14deg) scale(1.05)}
+header#siteHeader .logo img{height:46px!important;max-width:56px!important;filter:drop-shadow(0 4px 6px rgba(0,0,0,.7))}
+header#siteHeader nav.main-nav{flex:1 1 auto;display:flex;justify-content:center}
+header#siteHeader nav.main-nav ul{display:flex!important;gap:6px!important;flex-wrap:nowrap!important;margin:0;padding:0;list-style:none}
+header#siteHeader nav.main-nav a{display:block;padding:9px 15px!important;border-radius:10px;font-size:13px!important;font-weight:600;letter-spacing:.4px;white-space:nowrap;color:#eee;
+  transform-style:preserve-3d;transition:transform .3s,background .3s,box-shadow .3s,color .3s}
+header#siteHeader nav.main-nav a::after{display:none!important}
+header#siteHeader nav.main-nav a:hover,header#siteHeader nav.main-nav a.active{color:#111!important;background:linear-gradient(180deg,#ffd75e,#ffc72c);
+  transform:perspective(400px) rotateX(-14deg) translateY(-2px) translateZ(8px);box-shadow:0 6px 0 #a87a00,0 12px 18px rgba(255,199,44,.25)}
+header#siteHeader .header-right{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+header#siteHeader .header-right .btn{padding:11px 22px!important;border-radius:12px;box-shadow:0 5px 0 #a87a00,0 10px 18px rgba(255,199,44,.25);transition:transform .15s,box-shadow .15s}
+header#siteHeader .header-right .btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 #a87a00,0 14px 22px rgba(255,199,44,.3)}
+header#siteHeader .header-right .btn:active{transform:translateY(4px);box-shadow:0 1px 0 #a87a00}
+header#siteHeader .hamburger{display:none;width:46px;height:46px;border-radius:12px;background:linear-gradient(180deg,#2a2a2a,#151515);border:1px solid #444;
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 4px 0 #000,0 8px 14px rgba(0,0,0,.5)}
+header#siteHeader .hamburger:active{transform:translateY(3px);box-shadow:0 1px 0 #000}
+.overlay{z-index:10001!important}.mobile-nav{z-index:10002!important}
+@media(max-width:1100px){header#siteHeader nav.main-nav a{padding:8px 10px!important;font-size:12px!important}header#siteHeader .header-right .btn{padding:10px 16px!important}}
+@media(max-width:900px){header#siteHeader nav.main-nav{display:none!important}header#siteHeader .hamburger{display:flex!important}}
+@media(max-width:576px){header#siteHeader .container{padding-left:14px!important;padding-right:14px!important}header#siteHeader .navwrap{min-height:64px!important}
+  header#siteHeader .logo img{height:40px!important}header#siteHeader .logo-text{font-size:17px!important}
+  header#siteHeader .header-right .btn{padding:9px 14px!important;font-size:12px!important}header#siteHeader .header-right .btn i{display:none}
+  .topbar-social{display:none!important}.topbar-left span:nth-child(n+2){display:none!important}}
+@media(max-width:380px){header#siteHeader .header-right .btn{display:none!important}}
+
+/* ===== INSTAGRAM REELS ===== */
+#reels{position:relative;overflow:hidden;padding:90px 0 100px;background:radial-gradient(60% 50% at 50% 0%,rgba(255,199,44,.14),transparent 70%),#0a0a0a}
+.rl-head{text-align:center;padding:0 20px;margin-bottom:46px}
+.rl-head h2{font-size:clamp(32px,5vw,54px);text-transform:uppercase;color:#fff;margin:0 0 12px}
+.rl-head h2 em{font-style:normal;background:linear-gradient(90deg,#ffc72c,#ff6a3d,#e1306c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rl-head p{color:#a8a8a8;max-width:520px;margin:0 auto 22px}
+.rl-follow{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:50px;font-weight:700;color:#fff;text-decoration:none;
+  background:linear-gradient(45deg,#f9a03c,#e1306c 55%,#833ab4);box-shadow:0 5px 0 #4a1a6b,0 12px 24px rgba(225,48,108,.3);transition:.15s}
+.rl-follow:hover{transform:translateY(-2px)}.rl-follow:active{transform:translateY(4px);box-shadow:0 1px 0 #4a1a6b}
+.rl-stage{overflow:hidden;padding:30px 0 50px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.rl-track{display:flex;width:max-content;animation:rlMove 45s linear infinite}
+.rl-stage:hover .rl-track,.rl-stage:focus-within .rl-track{animation-play-state:paused}
+@keyframes rlMove{to{transform:translateX(-50%)}}
+.rl-card{position:relative;flex:0 0 auto;width:250px;aspect-ratio:9/16;margin-right:28px;border-radius:22px;border:1px solid rgba(255,255,255,.14);cursor:pointer;overflow:hidden;
+  padding:0;color:#fff;text-align:left;font:inherit;transform:perspective(900px) rotateY(-14deg);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s;
+  box-shadow:-14px 20px 30px rgba(0,0,0,.6);animation:rlBob 5s ease-in-out infinite}
+.rl-card:nth-child(even){animation-delay:-2.5s}
+@keyframes rlBob{50%{margin-top:-12px;margin-bottom:12px}}
+.rl-card:hover,.rl-card:focus-visible{transform:perspective(900px) rotateY(0) translateZ(40px) scale(1.06);box-shadow:0 0 0 2px #ffc72c,0 26px 50px rgba(255,199,44,.25);outline:0}
+.rl-card .rl-bg{position:absolute;inset:0;background:var(--g)}
+.rl-card .rl-bg::before{content:attr(data-n);position:absolute;right:-8px;top:34%;font:400 190px/1 'Anton',sans-serif;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.18)}
+.rl-card .rl-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 35%,rgba(0,0,0,.75))}
+.rl-tag{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:7px;padding:6px 12px;border-radius:30px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);font-size:12px;font-weight:600}
+.rl-play{position:absolute;left:50%;top:44%;width:74px;height:74px;margin:-37px;border-radius:50%;background:#ffc72c;color:#111;display:grid;place-items:center;font-size:26px;padding-left:5px;box-shadow:0 6px 0 #a87a00}
+.rl-play::before{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid #ffc72c;animation:rlPing 2s ease-out infinite}
+@keyframes rlPing{to{transform:scale(1.5);opacity:0}}
+.rl-cap{position:absolute;left:16px;right:16px;bottom:22px;font-family:'Anton',sans-serif;font-size:20px;text-transform:uppercase;letter-spacing:.5px}
+.rl-cap small{display:block;font:500 12px 'Poppins',sans-serif;color:#ddd;text-transform:none;margin-top:4px}
+.rl-bar{position:absolute;left:0;bottom:0;height:4px;width:100%;background:linear-gradient(90deg,#ffc72c,#e1306c);transform-origin:left;transform:scaleX(0)}
+.rl-card:hover .rl-bar{animation:rlBar 6s linear infinite}
+@keyframes rlBar{to{transform:scaleX(1)}}
+.rl-modal{position:fixed;inset:0;z-index:10050;display:none;place-items:center;background:rgba(0,0,0,.85);backdrop-filter:blur(6px);perspective:1200px}
+.rl-modal.open{display:grid}
+.rl-box{position:relative;width:min(92vw,400px);height:min(86vh,720px);border-radius:20px;overflow:hidden;background:#000;border:2px solid #ffc72c;animation:rlPop .5s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes rlPop{from{opacity:0;transform:rotateX(35deg) translateY(60px) scale(.8)}}
+.rl-box iframe{width:100%;height:100%;border:0;background:#fff}
+.rl-x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:14px;z-index:2;width:46px;height:46px;border-radius:50%;border:0;background:#ffc72c;color:#111;font-size:20px;cursor:pointer;box-shadow:0 4px 0 #a87a00}
+@media(max-width:576px){#reels{padding:60px 0 70px}.rl-card{width:200px;margin-right:18px;border-radius:18px}.rl-card .rl-bg::before{font-size:150px}.rl-track{animation-duration:38s}}
+@media(prefers-reduced-motion:reduce){.rl-track,.rl-card,.rl-play::before,header#siteHeader::after{animation:none!important}.rl-stage{overflow-x:auto}}
+</style>
+<style id="sticky-logo-fix">
+/* Sticky fix: overflow-x:hidden on html+body turned body into a scroll container, which breaks position:sticky. "clip" hides overflow without that side effect. */
+html,body{overflow-x:clip!important;overflow-y:visible!important;height:auto!important}
+html{scroll-padding-top:84px;scroll-behavior:smooth}
+body.menu-open{overflow:hidden!important}
+.topbar{position:relative;z-index:1}
+header#siteHeader{position:-webkit-sticky!important;position:sticky!important;top:0!important;width:100%}
+/* Logo */
+header#siteHeader .logo,.mobile-nav-head .logo,.footer .logo{display:flex!important;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+header#siteHeader .logo img{height:46px!important;width:auto!important;max-width:60px!important;object-fit:contain}
+.mobile-nav-head .logo img{height:38px!important;width:auto!important;max-width:52px!important;object-fit:contain}
+header#siteHeader .logo-text{display:block!important;white-space:nowrap;line-height:1!important;font-size:20px!important;color:#fff}
+header#siteHeader .logo-text span{display:block!important;margin-top:4px;font-size:10px!important;letter-spacing:5px!important;color:#ffc72c}
+.logo-badge{width:46px;height:46px;flex:0 0 auto;display:grid;place-items:center;border-radius:12px;background:linear-gradient(180deg,#ffd75e,#ffc72c);
+  color:#111;font:400 26px/1 'Anton',sans-serif;box-shadow:0 4px 0 #a87a00,0 8px 14px rgba(0,0,0,.5);transform:perspective(300px) rotateY(-12deg)}
+.mobile-nav-head .logo-badge{width:38px;height:38px;font-size:22px}
+@media(max-width:576px){header#siteHeader .logo-badge{width:40px;height:40px;font-size:22px}header#siteHeader .logo-text{font-size:16px!important}header#siteHeader .logo-text span{letter-spacing:4px!important;font-size:9px!important}}
+@media(max-width:340px){header#siteHeader .logo-text{display:none!important}}
+</style>
+<style id="mobile-header-unique">
+/* ===== Logo animation (all sizes; header, drawer, footer) ===== */
+@keyframes logoFloat{0%,100%{transform:translateY(0) rotateY(0)}50%{transform:translateY(-3px) rotateY(14deg)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(255,199,44,0))}50%{filter:drop-shadow(0 0 10px rgba(255,199,44,.75))}}
+@keyframes textShine{to{background-position:-250% 0}}
+@keyframes navDrop{from{opacity:0;transform:translateY(-40px) scale(.94)}}
+@keyframes drawerIn{from{opacity:0;transform:perspective(600px) translateX(50px) rotateY(-35deg)}to{opacity:1;transform:none}}
+.logo img,.logo-badge{animation:logoFloat 4s ease-in-out infinite,logoGlow 3s ease-in-out infinite}
+header#siteHeader .logo-text,.mobile-nav-head .logo-text{background:linear-gradient(100deg,#fff 42%,#ffd75e 50%,#fff 58%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:textShine 4s linear infinite}
+header#siteHeader .logo-text span,.mobile-nav-head .logo-text span{-webkit-text-fill-color:#ffc72c}
+footer .footer-logo img{animation:logoFloat 4s ease-in-out infinite,logoGlow 3s ease-in-out infinite}
+.footer-logo{display:flex;align-items:center;gap:10px}
+footer .footer-logo img,footer .logo img{display:block!important;height:52px!important;width:auto!important;max-width:66px!important;object-fit:contain}
+.mobile-nav-close{transition:transform .4s}.mobile-nav.open .mobile-nav-close{transform:rotate(180deg)}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)!important}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)!important}
+.mobile-nav.open ul li{opacity:0;animation:drawerIn .55s cubic-bezier(.2,.9,.3,1) forwards}
+.mobile-nav.open ul li:nth-child(1){animation-delay:.10s}.mobile-nav.open ul li:nth-child(2){animation-delay:.16s}.mobile-nav.open ul li:nth-child(3){animation-delay:.22s}
+.mobile-nav.open ul li:nth-child(4){animation-delay:.28s}.mobile-nav.open ul li:nth-child(5){animation-delay:.34s}.mobile-nav.open ul li:nth-child(6){animation-delay:.40s}.mobile-nav.open ul li:nth-child(7){animation-delay:.46s}
+.mobile-nav.open .mobile-nav-cta{animation:drawerIn .55s .55s cubic-bezier(.2,.9,.3,1) both}
+.mobile-nav ul li a{transition:transform .25s,color .25s,background .25s}.mobile-nav ul li a:active{transform:translateX(8px) scale(.98);color:#ffc72c}
+
+/* ===== Mobile / tablet: floating pill header ===== */
+@media(max-width:900px){
+  header#siteHeader{background:transparent!important;box-shadow:none!important;padding:8px 10px 0!important;perspective:none;animation:navDrop .8s cubic-bezier(.2,.9,.3,1) both}
+  header#siteHeader::after{display:none!important}
+  header#siteHeader .container{padding:0!important;max-width:none!important}
+  header#siteHeader .navwrap{position:relative;min-height:58px!important;padding:7px 8px 7px 12px!important;border-radius:20px;
+    background:linear-gradient(180deg,rgba(38,38,38,.92),rgba(12,12,12,.94))!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 0 rgba(0,0,0,.35),0 16px 30px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.18);
+    transition:min-height .3s,border-radius .3s,box-shadow .3s;overflow:hidden}
+  header#siteHeader .navwrap::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;border-radius:3px;
+    background:linear-gradient(90deg,transparent,#ffc72c,#fff3c4,#ffc72c,transparent);background-size:200% 100%;animation:hdrShine 3.5s linear infinite}
+  header#siteHeader.scrolled .navwrap{min-height:50px!important;border-radius:16px;box-shadow:0 6px 0 rgba(0,0,0,.3),0 12px 24px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18)}
+  header#siteHeader.scrolled .logo img,header#siteHeader.scrolled .logo-badge{transform:scale(.88)}
+  header#siteHeader .header-right{gap:8px}
+  header#siteHeader .hamburger{width:42px;height:42px;border-radius:14px}
+  header#siteHeader .header-right .btn{border-radius:14px;box-shadow:0 4px 0 #a87a00,0 8px 14px rgba(255,199,44,.22)}
+  html{scroll-padding-top:80px}
+}
+@media(max-width:380px){header#siteHeader .header-right .btn{display:inline-flex!important;padding:8px 11px!important;font-size:11px!important}}
+@media(max-width:340px){header#siteHeader .logo-text{display:none!important}}
+@media(prefers-reduced-motion:reduce){.logo img,.logo-badge,header#siteHeader,header#siteHeader .logo-text,header#siteHeader .navwrap::after,.mobile-nav.open ul li,.mobile-nav.open .mobile-nav-cta{animation:none!important;opacity:1!important}}
+</style>
+<style id="reels-live">
+/* Real reel previews inside cards (Instagram embed, header cropped) */
+#reels{--w:250px;--gap:28px}
+@media(max-width:576px){#reels{--w:200px;--gap:18px}}
+.rl-stage{max-width:1800px;margin:0 auto}
+.rl-track{position:relative!important;display:block!important;width:100%!important;height:calc(var(--w)*16/9 + 34px);animation:none!important;transform:none!important}
+.rl-slot{position:absolute;left:0;top:14px;width:var(--w);will-change:transform}
+.rl-card{width:100%!important;margin-right:0!important;background:#111;display:block}
+.rl-card .rl-bg{z-index:0}
+.rl-card .rl-bg::before,.rl-card .rl-bg::after{display:none}
+.rl-card iframe{position:absolute;z-index:1;left:0;top:-64px;width:400px;height:820px;border:0;background:transparent;transform-origin:0 0;transform:scale(.625);pointer-events:none}
+@media(max-width:576px){.rl-card iframe{transform:scale(.5)}}
+.rl-card::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.28),transparent 22%,transparent 78%,rgba(0,0,0,.55));pointer-events:none}
+.rl-tag{z-index:3}
+.rl-hint{position:absolute;z-index:3;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:30px;background:#ffc72c;color:#111;font:700 12px 'Poppins',sans-serif;white-space:nowrap;box-shadow:0 4px 0 #a87a00}
+.rl-card .rl-bar{z-index:3}
+.rl-card:focus-visible{outline:0}
+.rl-track.static{display:flex!important;height:auto;width:max-content!important}
+.rl-track.static .rl-slot{position:relative;top:0;margin-right:var(--gap);transform:none!important}
+</style>
+
+
+
+
+
 </head>
 <body class="loading">
 
@@ -2061,6 +2224,19 @@ header#siteHeader .hamburger{
 </section>
 
 <!-- ===== FINAL CTA ===== -->
+<!-- ===== INSTAGRAM REELS ===== -->
+<section id="reels" aria-label="Instagram reels">
+  <div class="rl-head">
+    <h2>Watch Us <em>In Action</em></h2>
+    <p>Real workouts, real results. Tap any reel to play it right here.</p>
+    <a class="rl-follow" id="rlFollow" href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Follow on Instagram</a>
+  </div>
+  <div class="rl-stage"><div class="rl-track" id="rlTrack"></div></div>
+</section>
+<div class="rl-modal" id="rlModal" role="dialog" aria-modal="true" aria-label="Instagram reel">
+  <div class="rl-box"><button class="rl-x" id="rlClose" aria-label="Close reel"><i class="fa-solid fa-xmark"></i></button><iframe id="rlFrame" title="Instagram reel" allowfullscreen allow="autoplay; encrypted-media; fullscreen"></iframe></div>
+</div>
+
 <section class="final-cta" id="contact">
   <div class="final-cta-diag"></div>
   <div class="container">
@@ -2414,6 +2590,65 @@ if (window.Swiper && document.querySelector('.testi-swiper')) new Swiper('.testi
     }
   });
   observer.observe(nav, {attributes:true, attributeFilter:['class']});
+})();
+</script>
+
+<script>
+(function(){
+  var reels=["https://www.instagram.com/p/Db0ibnMy_Kt/","https://www.instagram.com/p/Dci3b6KsJjz/","https://www.instagram.com/reel/Db0euk3iRCv/","https://www.instagram.com/reel/DYh5dMYPjFT/","https://www.instagram.com/reel/DYHs4xUzBCR/","https://www.instagram.com/reel/DX_TdJOpgLd/","https://www.instagram.com/reel/DXJnqvnEW0T/","https://www.instagram.com/reel/DTkxpv0EgH-/"];
+  var grads=["linear-gradient(160deg,#3a2a00,#0a0a0a 70%)","linear-gradient(160deg,#4a1233,#0a0a0a 70%)","linear-gradient(160deg,#1c2a4a,#0a0a0a 70%)","linear-gradient(160deg,#4a2508,#0a0a0a 70%)"];
+  var stage=document.querySelector('.rl-stage'),track=document.getElementById('rlTrack'),modal=document.getElementById('rlModal'),frame=document.getElementById('rlFrame');
+  if(!track)return;
+  var html='';
+  reels.forEach(function(u,i){
+    var isPost=u.indexOf('/p/')>-1;
+    html+='<div class="rl-slot"><div class="rl-card" role="button" tabindex="0" data-url="'+u+'" aria-label="Play '+(isPost?'post':'reel')+' '+(i+1)+'">'+
+    '<span class="rl-bg" style="--g:'+grads[i%4]+'"></span>'+
+    '<iframe src="'+u+'embed" loading="'+(i<4?'eager':'lazy')+'" scrolling="no" tabindex="-1" title="Preview '+(i+1)+'"></iframe>'+
+    '<span class="rl-tag"><i class="fa-brands fa-instagram"></i>'+(isPost?'Post':'Reel')+'</span>'+
+    '<span class="rl-hint"><i class="fa-solid fa-play"></i> Tap to play</span><span class="rl-bar"></span></div></div>';
+  });
+  track.innerHTML=html;
+  var slots=[].slice.call(track.querySelectorAll('.rl-slot'));
+  function open(u){frame.src=u+'embed';modal.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){modal.classList.remove('open');frame.src='about:blank';document.body.style.overflow='';}
+  track.addEventListener('click',function(e){var c=e.target.closest('.rl-card');if(c)open(c.dataset.url);});
+  track.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('rl-card')){e.preventDefault();open(e.target.dataset.url);}});
+  document.getElementById('rlClose').onclick=close;
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+
+  /* Right-to-left endless loop. Cards are moved with transforms only, so the iframes never reload. */
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){track.classList.add('static');stage.style.overflowX='auto';return;}
+  var paused=false,off=0,last=performance.now();
+  stage.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')paused=true;});
+  stage.addEventListener('pointerleave',function(){paused=false;});
+  stage.addEventListener('focusin',function(){paused=true;});stage.addEventListener('focusout',function(){paused=false;});
+  stage.addEventListener('touchstart',function(){paused=true;},{passive:true});
+  stage.addEventListener('touchend',function(){setTimeout(function(){paused=false;},1200);},{passive:true});
+  function tick(t){
+    var dt=Math.min(t-last,60)/1000;last=t;
+    var w=slots[0].offsetWidth,gap=parseFloat(getComputedStyle(document.getElementById('reels')).getPropertyValue('--gap'))||28;
+    var step=w+gap,total=step*slots.length;
+    if(!paused)off=(off+(w>220?55:42)*dt)%total;
+    for(var i=0;i<slots.length;i++){
+      var x=(((i*step-off+step)%total)+total)%total-step;
+      slots[i].style.transform='translate3d('+x.toFixed(1)+'px,0,0)';
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+
+<script>
+/* If logo.png is missing/broken, show a 3D "M" badge instead of a broken image */
+(function(){
+  function fallback(img){if(img.dataset.fb)return;img.dataset.fb=1;var b=document.createElement('span');b.className='logo-badge';b.textContent='M';b.setAttribute('aria-hidden','true');img.replaceWith(b);}
+  document.querySelectorAll('.logo img,.footer-logo img').forEach(function(img){
+    img.addEventListener('error',function(){fallback(img)});
+    if(img.complete&&img.naturalWidth===0)fallback(img);
+  });
 })();
 </script>
 
